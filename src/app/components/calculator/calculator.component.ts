@@ -21,6 +21,13 @@ export class CalculatorComponent implements OnInit {
   ngOnInit(): void {}
 
   onClickKey(value: string) {
+    if (this.top === 'Infinity') {
+      this.top = '';
+      this.bottom = value;
+      this.operation = '';
+      return;
+    }
+
     if (this.bottom.length === 1 && this.bottom === '0' && value === '0')
       return;
 
@@ -39,7 +46,7 @@ export class CalculatorComponent implements OnInit {
       this.top = this.onCompute(this.operation);
       this.bottom = '';
     } else {
-      if (!this.top && operation && this.bottom !== '0') {
+      if (!this.top && operation) {
         this.top = this.bottom;
         this.bottom = '';
       }

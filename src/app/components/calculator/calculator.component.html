@@ -1,0 +1,31 @@
+<div class="calculator">
+  <div class="calculator_screen">
+    <div class="calculator_content">
+      <div class="top">{{ top }}</div>
+      <div class="bottom">{{ bottom }}</div>
+    </div>
+    <div class="operator">{{ operators[operation] }}</div>
+  </div>
+
+  <div class="calculator_keys">
+    <div (click)="onClickKey('9')">9</div>
+    <div (click)="onClickKey('8')">8</div>
+    <div (click)="onClickKey('7')">7</div>
+    <div (click)="onDoOperations('div')">÷</div>
+    <div (click)="onDoActions('Del')">&#8592;</div>
+    <div (click)="onClickKey('6')">6</div>
+    <div (click)="onClickKey('5')">5</div>
+    <div (click)="onClickKey('4')">4</div>
+    <div (click)="onDoOperations('mul')">×</div>
+    <div (click)="onDoActions('CE')">CE</div>
+    <div (click)="onClickKey('3')">3</div>
+    <div (click)="onClickKey('2')">2</div>
+    <div (click)="onClickKey('1')">1</div>
+    <div (click)="onDoOperations('add')">+</div>
+    <div (click)="onDoActions('C')">C</div>
+    <div (click)="onClickKey('0')" class="zero">0</div>
+    <div (click)="onClickKey('.')">.</div>
+    <div (click)="onDoOperations('sub')">-</div>
+    <div (click)="onDoOperations(operation)">=</div>
+  </div>
+</div>

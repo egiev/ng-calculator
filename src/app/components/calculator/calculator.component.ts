@@ -35,9 +35,9 @@ export class CalculatorComponent implements OnInit {
   }
 
   onDoOperations(operation: string) {
-    if (this.top && this.bottom && this.bottom != '0') {
+    if (this.top && this.bottom && this.bottom !== '') {
       this.top = this.onCompute(this.operation);
-      this.bottom = '0';
+      this.bottom = '';
     } else {
       if (!this.top && operation && this.bottom !== '0') {
         this.top = this.bottom;
